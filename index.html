@@ -1,15 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+    <div class="jumbotron">
+        <h1>Country Trivia</h1>
+        <div id="startGame">
+            <button class="btn btn-success">Start Game</button>
+        </div>
+        
+        <div>Time remaining: <span id="updatedTime"></span></div>
+
+            <div>
+                <div>Which country pop singer was born Eilleen Regina Edwards?</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question1" value="0">
+                    <label class="form-check-label">Taylor Swift</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question1" value="1">
+                    <label class="form-check-label" for="inlineRadio2">Shania Twain</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question1" value="0">
+                    <label class="form-check-label" for="inlineRadio3">Carrie Underwood</label>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div>Who sings Got Whatever It Is?</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question2" value="0">
+                    <label class="form-check-label">Brad Paisley</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question2" value="0">
+                    <label class="form-check-label" for="inlineRadio2">Jason Aldean</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question2" value="0">
+                    <label class="form-check-label" for="inlineRadio3">Toby Keith</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="question2" value="1">
+                        <label class="form-check-label" for="inlineRadio3">Zac Brown Band</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div>What is Taylor Swift's 2nd album named?</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question3" value="0">
+                    <label class="form-check-label">Love Story</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question3" value="0">
+                    <label class="form-check-label" for="inlineRadio2">Bad Blood</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question3" value="0">
+                    <label class="form-check-label" for="inlineRadio3">Lover</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="question3" value="1">
+                        <label class="form-check-label" for="inlineRadio3">Fearless</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div>Which male country singer co-hosts the TV show The Voice?</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question4" value="1">
+                    <label class="form-check-label">Blake Shelton</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question4" value="0">
+                    <label class="form-check-label" for="inlineRadio2">Adam Levine</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question4" value="0">
+                    <label class="form-check-label" for="inlineRadio3">Cole Swindell</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="question4" value="0">
+                        <label class="form-check-label" for="inlineRadio3">Tim McGraw</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div>Which outspoken female country group became publicly critical of George W. Bush during his presidency?</div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question5" value="0">
+                    <label class="form-check-label">Pistol Annies</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question5" value="1">
+                    <label class="form-check-label" for="inlineRadio2">Dixie Chicks</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="question5" value="0">
+                    <label class="form-check-label" for="inlineRadio3">Maddie & Tae</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="question5" value="0">
+                        <label class="form-check-label" for="inlineRadio3">Runaway June</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <button class="btn btn-success" id="reset">Play Again?</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
