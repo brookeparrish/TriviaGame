@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     }
 
-    var timeRemaining = 8;
+    var timeRemaining = 20;
     var timer= null;
 
     function startTimer () {
