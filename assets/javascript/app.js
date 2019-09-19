@@ -1,10 +1,22 @@
 $(document).ready(function () {
     
+    $("#startGame").click(function (){
+        $("#startGame").hide();
+        $("#updatedTime").text(timeRemaining);
+        startTimer();
+        $("#gameStarted").show();
+    });
+
+    $("#gameStarted").hide();
+
+    $("#allDone").hide();
+      
+    var correctAnswer = 0;
+    var allAnswer = [];
+    var unanswered = 0;
+    var incorrectAnswer = 0;
+
     function calculateScore () {
-        let correctAnswer = 0;
-        let allAnswer = [];
-        let unanswered = 0;
-        let incorrectAnswer = 0;
 
         let answer1 = $("input[name='question1']:checked").val();
         let answer2 = $("input[name='question2']:checked").val();
@@ -24,20 +36,31 @@ $(document).ready(function () {
         }
 
         incorrectAnswer = 5 - correctAnswer;
+
     }
 
-    var timeRemaining = 30;
-    var timer = setInterval(myTimer, 1000);
-    
+    var timeRemaining = 8;
+    var timer= null;
+
+    function startTimer () {
+        timer = setInterval(myTimer, 1000);
+    }
+        
     function myTimer() {
         $("#updatedTime").text(timeRemaining);
 
         if(timeRemaining === 0) {
             clearInterval(timer);
+            $("#gameStarted").hide();
+            calculateScore();
+            $("#correctAnswers").text(correctAnswer);
+            $("#incorrectAnswers").text(incorrectAnswer);
+            $("#unanswered").text(unanswered);
+            $("#allDone").show();
         }
 
         timeRemaining--;
     }
 
-    //$("#startGame").hide();
+    
 });
